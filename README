@@ -1,7 +1,7 @@
 README
 
-This directory contains code to reproduce the results from the submission:
-Learning From Context-Agnostic Synthetic Data
+Code to reproduce the results for the NeurIPS 2021 paper "Towards
+Context-Agnostic Learning Using Synthetic Data" 
 
 
 INSTRUCTIONS
