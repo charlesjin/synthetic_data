@@ -1,0 +1,44 @@
+README
+
+This directory contains code to reproduce the results from the submission:
+Learning From Context-Agnostic Synthetic Data
+
+
+INSTRUCTIONS
+
+The subdirectories contains code to train and test a model from scratch
+> python train.py
+> python test.py
+
+
+DATASETS
+
+Both synthetic datasets used for training (Font, Picto) are included. For
+testing, both the MNIST and the GTSRB dataset need to be downloaded. PyTorch 
+handles MNIST automatically but GTSRB needs to be downloaded prior to running 
+the test script. The link for the archive is at
+https://sid.erda.dk/public/archives/daaeac0d7ce1152aea9b61d9f1e19370/published-archive.html
+under "GTSRB_Final_Test_Images.zip". This archive needs to be extracted to 
+gtsrb/data/GTSRB_Test/Images. For convenience we have also included the shell
+script get_gtsrb.sh which downloads and extracts the GTSRB test images.
+
+
+RESULTS
+
+Pretrained models for each benchmark are in checkpoint/pretrained.pth. These 
+can be tested by uncommenting a line in test.py. Note that we report the model
+with the best performance on the test set, checking every 5 epochs. The 
+performance at the final epoch is typically a few percentage points lower.
+
+MNIST (trained with Font)
+90.2%
+
+GTSRB (trained with Picto)
+95.9%
+
+
+DEPENDENCIES
+
+We used Python 3.9.7 for all experiments
+> pip install -r requirements.txt
+
